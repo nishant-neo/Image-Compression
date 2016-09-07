@@ -7,7 +7,7 @@ import matplotlib.pylab as pl
 img = Image.open('Iasp.png')
 imggray = img.convert('LA')
 plt.figure(figsize = ( 9, 6))
-plt.imshow(imggray)
+#plt.imshow(imggray)
 
 imgmat = np.array( list(imggray.getdata(band = 0)), float)
 imgmat.shape = (imggray.size[1], imggray.size[0])

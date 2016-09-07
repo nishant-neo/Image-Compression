@@ -20,7 +20,7 @@ U, S, Vt = np.linalg.svd(imgmat) #single value decomposition
 for i in xrange(5, 51, 5):
 	cmpimg = np.matrix(U[:, :i]) * np.diag(S[:i]) * np.matrix(Vt[:i,:])
 	plt.imshow(cmpimg, cmap = 'gray')
-	title = " n = %s" %i
+	title = " Image after =  %s" %i
 	plt.title(title)
 	plt.show()
 	result = Image.fromarray((cmpimg ).astype(np.uint8))
